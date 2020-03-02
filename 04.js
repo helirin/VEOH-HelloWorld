@@ -1,4 +1,4 @@
-//luokka
+//tehdään tilauksesta luokka
 class order{
     delivered = false;
     constructor(id, message){
@@ -9,7 +9,7 @@ class order{
 
 function summarize_order(id, message, delivered){
     var summary = 'order id: ' +
-    id + 'message: ' + message + 'delivered: ' + delivered;
+    id + ', message: ' + message + ', delivered: ' + delivered;
     return summary;
 }
 let order_obj = new order(1237, 'Second order');

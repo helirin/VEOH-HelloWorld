@@ -1,14 +1,24 @@
-//voi laittaa objektiksi, mutta en ehtinyt tunnilla
-const order_id = 1234;
-const order_message = 'My order'; // käyttää myös lainausmerkkejä
-let order_delivered = false;
+//voi laittaa myös objektiksi
+let order = {
+    id: 1234,
+    message: 'My order',
+    delivered: false
+}
+
 
 function summarize_order(id, message, delivered){
     var summary = 'order id: ' +
-    id + 'message: ' + message + 'delivered: ' + delivered;
+    id + ', message: ' + message + ', delivered: ' + delivered;
     return summary;
 }
-
-var order_summary = summarize_order(order_id, order_message, order_delivered);
-
+//huomaa pisteet esim. order.id
+const order_summary = summarize_order(order.id, order.message, order.delivered);
 console.log(order_summary);
+//delivered muutetaan
+order.delivered = true;
+const order_summary_2 = summarize_order(order.id, order.message, order.delivered);
+console.log(order_summary_2);
+//order id muutetaan
+order.id = 5436;
+const order_summary_3 = summarize_order(order.id, order.message, order.delivered);
+console.log(order_summary_3);
